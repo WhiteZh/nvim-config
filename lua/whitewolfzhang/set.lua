@@ -1,3 +1,5 @@
+vim.o.fileformat = "unix"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -12,7 +14,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-if vim.loop.os_uname() == 'Windows_NT' then
+if vim.loop.os_uname().sysname == 'Windows_NT' then
     vim.opt.undodir = vim.fn.stdpath('state') .. '/undo'
 else
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
