@@ -1,3 +1,5 @@
+vim.lsp.enable('luals')
+
 vim.o.fileformat = "unix"
 
 vim.opt.nu = true
@@ -28,16 +30,16 @@ vim.opt.isfname:append("@-@")
 
 vim.g.mapleader = " "
 
-vim.keymap.set('n', "<leader>fe", vim.cmd.Ex, {})
-vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>')
+vim.keymap.set('n', "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
+vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>', { desc = "Open terminal" })
 vim.keymap.set('n', "<leader>nu", function()
     vim.opt.nu = true
     vim.opt.relativenumber = true
-end)
+end, { desc = "Enable line numbering" })
 vim.keymap.set('n', "<leader>nonu", function()
     vim.opt.nu = false
     vim.opt.relativenumber = false
-end)
+end, { desc = "Disable line numbering" })
 vim.keymap.set('n', "<leader>ts", function()
     vim.ui.input({ prompt = "Enter value for Tab Space: "}, function(input)
         input = tonumber(input)
@@ -45,4 +47,4 @@ vim.keymap.set('n', "<leader>ts", function()
         vim.opt.softtabstop = input
         vim.opt.shiftwidth = input
     end)
-end)
+end, { desc = "Set tab space" })
