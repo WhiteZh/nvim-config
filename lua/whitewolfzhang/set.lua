@@ -1,5 +1,3 @@
-vim.lsp.enable('luals')
-
 vim.o.fileformat = "unix"
 
 vim.opt.nu = true
