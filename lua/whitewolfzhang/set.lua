@@ -8,7 +8,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
-vim.opt.smartindent = true
+vim.opt.smartindent = false
 
 vim.opt.wrap = false
 
@@ -46,3 +46,15 @@ vim.keymap.set('n', "<leader>ts", function()
         vim.opt.shiftwidth = input
     end)
 end, { desc = "Set tab space" })
+
+
+
+-- filetype specific behaviors
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "scala",
+    callback = function()
+        vim.opt.tabstop = 4
+        vim.opt.softtabstop = 4
+        vim.opt.shiftwidth = 4
+    end,
+})
