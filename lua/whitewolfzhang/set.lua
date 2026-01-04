@@ -18,6 +18,8 @@ if vim.loop.os_uname().sysname == 'Windows_NT' then
     vim.opt.undodir = vim.fn.stdpath('state') .. '/undo'
 else
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+    vim.opt.shell = "sh"
 end
 vim.opt.undofile = true
 
