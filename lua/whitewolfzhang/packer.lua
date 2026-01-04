@@ -16,7 +16,11 @@ return require('packer').startup(function(use)
 
     use "olimorris/onedarkpro.nvim"
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+        'nvim-treesitter/nvim-treesitter', 
+        branch = 'master',
+        run = ':TSUpdate',
+    }
 
     use('mbbill/undotree')
 
