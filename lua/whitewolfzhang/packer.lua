@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter', 
         branch = 'master',
-        run = ':TSUpdate',
+        -- run = ':TSUpdate',
     }
 
     use('mbbill/undotree')
