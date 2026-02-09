@@ -18,6 +18,8 @@ if vim.loop.os_uname().sysname == 'Windows_NT' then
     vim.opt.undodir = vim.fn.stdpath('state') .. '/undo'
 else
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+    vim.opt.shell = "sh"
 end
 vim.opt.undofile = true
 
@@ -29,7 +31,7 @@ vim.opt.isfname:append("@-@")
 vim.g.mapleader = " "
 
 vim.keymap.set('n', "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
-vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>', { desc = "Open terminal" })
+-- vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>', { desc = "Open terminal" })
 vim.keymap.set('n', "<leader>nu", function()
     vim.opt.nu = true
     vim.opt.relativenumber = true
