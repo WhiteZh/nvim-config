@@ -31,7 +31,7 @@ vim.opt.isfname:append("@-@")
 vim.g.mapleader = " "
 
 vim.keymap.set('n', "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
-vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>', { desc = "Open terminal" })
+-- vim.keymap.set('n', "<leader>te", ':te /usr/local/bin/bash --init-file "~/.bash_profile" -i<CR>:setlocal nonu<CR>:setlocal norelativenumber<CR>', { desc = "Open terminal" })
 vim.keymap.set('n', "<leader>nu", function()
     vim.opt.nu = true
     vim.opt.relativenumber = true
