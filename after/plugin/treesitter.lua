@@ -43,6 +43,7 @@ local languages = {
   "markdown",
   "markdown_inline",
   "nu",
+  "odin",
   "python",
   "query",
   "rust",
