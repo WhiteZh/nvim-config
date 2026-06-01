@@ -17,6 +17,14 @@ vim.api.nvim_create_autocmd("User", {
 vim.treesitter.language.register("crystal", { "cr" })
 --- <<< Crystal Lang <<<
 
+--- >>> File Extension Association >>>
+vim.filetype.add({
+  extension = {
+    cs = "c_sharp",
+  }
+})
+--- <<< File Extension Association <<<
+
 local languages = {
   "c",
   "c3",
