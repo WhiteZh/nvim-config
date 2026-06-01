@@ -1,8 +1,28 @@
+--- >>> Crystal Lang >>>
+vim.api.nvim_create_autocmd("User", {
+  pattern = 'TSUpdate',
+  callback = function()
+    require('nvim-treesitter.parsers').crystal = {
+      install_info = {
+        url = 'https://github.com/crystal-lang-tools/tree-sitter-crystal',
+        -- path = '<ts-crystal-install-path>', -- if you want to use a local version instead
+        generate = false,
+        generate_from_json = false,
+        queries = 'queries/nvim'
+      },
+    }
+  end,
+})
+
+vim.treesitter.language.register("crystal", { "cr" })
+--- <<< Crystal Lang <<<
+
 local languages = {
   "c",
   "c3",
   "c_sharp",
   "cpp",
+  "crystal",
   "go",
   "haskell",
   "html",
