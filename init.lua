@@ -1,2 +1,1 @@
-require("whitewolfzhang")
-require("whitewolfzhang.packer")
+require("config")
