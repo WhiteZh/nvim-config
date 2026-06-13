@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "haskell",
+    pattern = {"haskell", "crystal"},
     callback = function()
         vim.opt.tabstop = 2
         vim.opt.softtabstop = 2
